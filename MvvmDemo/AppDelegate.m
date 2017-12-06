@@ -24,7 +24,7 @@
     UINavigationController *nvc =[[ UINavigationController alloc] initWithRootViewController:[ViewController new]];
     
         self.window.rootViewController =nvc;
-    NSLog(@"11");
+
 
     return YES;
 }
