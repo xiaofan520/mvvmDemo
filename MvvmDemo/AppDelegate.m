@@ -26,7 +26,7 @@
         self.window.rootViewController =nvc;
 
     NSLog(@"222");
-    NSLog(@"11");
+
 
     return YES;
 }
