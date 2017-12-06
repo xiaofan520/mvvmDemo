@@ -24,13 +24,10 @@
     UINavigationController *nvc =[[ UINavigationController alloc] initWithRootViewController:[ViewController new]];
     
         self.window.rootViewController =nvc;
-<<<<<<< HEAD
 
     NSLog(@"222");
-=======
     NSLog(@"11");
 
->>>>>>> parent of 4e3f0df... no message
     return YES;
 }
 
