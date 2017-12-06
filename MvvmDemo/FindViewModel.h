@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+@interface FindViewModel : NSObject<UITableViewDelegate,UITableViewDataSource>
 
-@interface FindViewModel : NSObject
++(instancetype)findViewModel;
+@property (nonatomic,strong) NSMutableArray *dataArr;
+
+
+-(void)loadDataSuccess:(void(^)(id))success;
+
 
 @end

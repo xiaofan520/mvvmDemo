@@ -7,16 +7,74 @@
 //
 
 #import "MyCodeViewController.h"
+#import "CodeViewModel.h"
+#import "CodeTableViewCell.h"
+@interface MyCodeViewController ()<CodeTableViewCellBtClicked,codeViewModelTableViewCellClicked>
+@property (nonatomic,strong)UITableView *tableView;
+@property (nonatomic,strong) NSMutableArray* dataSource;
+@property (nonatomic,strong) CodeViewModel *codeViewModel;
 
-@interface MyCodeViewController ()
 
 @end
 
 @implementation MyCodeViewController
 
+- (CodeViewModel *)codeViewModel{
+
+    if (!_codeViewModel) {
+        _codeViewModel = [CodeViewModel codeViewModel];
+        _codeViewModel.delegate =self;
+        _codeViewModel.btDelegate = self;
+        
+    }
+    return _codeViewModel;
+    
+    
+}
+-(UITableView *)tableView{
+    
+    if (!_tableView) {
+        _tableView  = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, WIDTH, HEIGHT-64) style:UITableViewStylePlain];
+        _tableView.delegate = self.codeViewModel;
+        _tableView.dataSource =self.codeViewModel;
+        _tableView.estimatedRowHeight = 80;
+        
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [_tableView registerClass:[CodeTableViewCell class] forCellReuseIdentifier:@"codeTableViewCell"];
+
+    }
+    return _tableView;
+    
+    
+}
+- (NSMutableArray *)dataSource {
+    if (_dataSource) {
+        return _dataSource;
+    }
+    _dataSource = [[NSMutableArray alloc] init];
+    return _dataSource;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.view addSubview:self.tableView];
+    [self.codeViewModel loadData:^{
+        
+        [self.tableView reloadData];
+        
+    }];
+    
+}
+- (void)codeViewModelTableViewCellClicked:(NSIndexPath *)index{
+
+    NSLog(@"--%ld",(long)index.row);
+    
+    
+    
+}
+-(void)CodeTableViewCellBtClicked:(UIButton *)sender andWithCodeModel:(MyCodelModel *)model andClickedType:(CDMyCodeClickedType)type{
+
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

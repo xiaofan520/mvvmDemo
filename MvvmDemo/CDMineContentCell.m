@@ -7,6 +7,7 @@
 //
 
 #import "CDMineContentCell.h"
+#import "UILabel+CDLabel.h"
 
 @interface CDMineContentCell ()
 

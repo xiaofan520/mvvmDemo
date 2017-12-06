@@ -7,7 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface MyTableviewContViewModel : NSObject
+@protocol CDTableViewDelegate <NSObject>
+
+@optional
+/*!
+ @brief tableView点击回调
+ @param model 数据参数 indexPath 下标
+ */
+- (void)tableViewWithModel:(id)model indexPath:(NSIndexPath *)indexPath;
+
+@end
+@interface MyTableviewContViewModel : NSObject<UITableViewDelegate,UITableViewDataSource>
++(instancetype)contentViewModel;
+@property(nonatomic,weak)id<CDTableViewDelegate>delegate;
+
+
+- (void) loadDataWithSuccess:(void(^)(id dataSource))success;
+
+
 
 @end

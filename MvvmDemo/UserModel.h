@@ -10,4 +10,11 @@
 
 @interface UserModel : NSObject
 
+@property (nonatomic,copy) NSString *name;
+@property (nonatomic,copy) NSString *uuid;
+@property (nonatomic,copy) NSString *age;
+@property (nonatomic,copy) NSString *asign;
+
+
++(instancetype)modelWithDic:(NSDictionary *)dict;
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface NSString (CDStringSize)
 /**计算字符串高度*/
 + (CGSize) stringLengthWithStr:(NSString *)str with:(CGFloat)with height:(CGFloat)height font:(CGFloat)font;

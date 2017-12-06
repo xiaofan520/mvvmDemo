@@ -7,21 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-@class DBStepModel;
+@class UserModel;
 @interface DBManager : NSObject
 /**单例*/
 +(instancetype)sharedManager;
 /**检查是否存在*/
--(BOOL)isExsitsWithDate:(NSString *)date;
+-(BOOL)isExsitsWithDate:(NSString *)uuid;
 /**添加数据*/
--(BOOL)addStepDataModel:(DBStepModel *)model;
+-(BOOL)addStepDataModel:(UserModel *)model;
 /**删除数据*/
--(BOOL)deleteStepDataModel:(DBStepModel *)model;
+-(BOOL)deleteStepDataModel:(UserModel *)model;
 /**获取所有数据*/
 -(NSArray *)getAllStepData;
 
 -(BOOL)deleteStepData;
 
--(NSArray *)getOneData:(NSString *)date;
+-(NSArray *)getOneData:(NSString *)uuid;
 
 @end

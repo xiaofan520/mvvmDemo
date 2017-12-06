@@ -7,21 +7,31 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CellModel.h"
+#import "UserModel.h"
 @interface DEManager : NSObject
 + (DEManager*)shareManager;
 // 增加一条数据
-- (BOOL)insertDataWithModel:(CellModel *)model;
+- (BOOL)insertDataWithModel:(UserModel *)model;
 // 删除一条数据
-- (BOOL)deleteDataWithModel:(CellModel *)model;
-
-// 修改一条数据
-- (BOOL)updateDataWithModel:(CellModel *)model;
-
+- (BOOL)deleteDataWithModel:(UserModel *)model;
 
 // 查询  要知道这条数据是否已经存在数据中
-- (BOOL)dataExistsWithModel:(CellModel *)model;
+- (BOOL)dataExistsWithModel:(UserModel *)model;
+
+
+-(BOOL)updateDataWithModel:(UserModel *)model;
 
 // 获得表格里面所有的数据
 - (NSArray *) tableAllData;
+
+
+/**
+ 根据模型key 获取指定的单个数据
+
+ @param uuid 传入的uuid
+
+ @return 返回数组
+ */
+-(NSArray *)getOneData:(NSString *)uuid;
+
 @end

@@ -9,5 +9,19 @@
 #import "UserModel.h"
 
 @implementation UserModel
++(instancetype)modelWithDic:(NSDictionary *)dict{
+
+    UserModel *model = [[UserModel alloc] init];
+    [model setValuesForKeysWithDictionary:dict];
+    
+    return model;
+    
+    
+    
+}
+
+-(void)setValue:(id)value forUndefinedKey:(NSString *)key{
+
+}
 
 @end

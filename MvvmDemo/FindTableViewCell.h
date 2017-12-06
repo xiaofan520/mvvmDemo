@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ContetModel.h"
 @interface FindTableViewCell : UITableViewCell
+
+- (void)cellWithModel:(ContetModel*)model;
+
 
 @end

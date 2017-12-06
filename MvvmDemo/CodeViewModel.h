@@ -7,7 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "CodeTableViewCell.h"
+@protocol codeViewModelTableViewCellClicked <NSObject>
 
-@interface CodeViewModel : NSObject
+-(void)codeViewModelTableViewCellClicked:(NSIndexPath*)index;
+
+@end
+@interface CodeViewModel : NSObject<UITableViewDelegate,UITableViewDataSource,CodeTableViewCellBtClicked>
+@property (nonatomic,strong)NSMutableArray *dataArr;
+@property (nonatomic,weak)id<codeViewModelTableViewCellClicked>delegate;
+@property (nonatomic,weak)id<CodeTableViewCellBtClicked>btDelegate;
+
++(instancetype)codeViewModel;
+
+-(void)loadData:(void(^)())success;
+
 
 @end

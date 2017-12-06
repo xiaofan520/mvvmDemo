@@ -7,7 +7,7 @@
 //
 
 #import "UILabel+CDLabel.h"
-
+#import "UIColor+CKLHexColor.h"
 @implementation UILabel (CDLabel)
 
 + (UILabel *)creatLabelWithFont:(NSInteger)font textColor:(NSString *)color frame:(CGRect)ract textAlign:(NSTextAlignment)align {

@@ -7,7 +7,9 @@
 //
 
 #import "NSString+CDStringSize.h"
-
+#import "UIColor+CDColor.h"
+#import "UIColor+CKLHexColor.h"
+#import <UIKit/UIKit.h>
 @implementation NSString (CDStringSize)
 
 + (CGSize) stringLengthWithStr:(NSString *)str with:(CGFloat)with height:(CGFloat)height font:(CGFloat)font{

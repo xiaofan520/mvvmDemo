@@ -8,7 +8,7 @@
 
 #import "DBManager.h"
 #import "FMDB.h"
-#import "DBStepModel.h"
+#import "UserModel.h"
 @implementation DBManager{
     //FMDB的数据库管理对象.
     FMDatabase *_dataBase;
@@ -42,7 +42,7 @@
         
         //创建数据库表(date,myStep,goalStep)
         //如果在目录下没有这个数据库文件,那么就会创建该文件.
-        NSString *createSql =@"create table if not exists stepData(date varchar(255),myStep varchar(255),goalStep varchar(255))";
+        NSString *createSql =@"create table if not exists userInfo(uuid varchar(255),name varchar(255),age asign(255))";
         //执行文件,创建数据库表,
         [_dataBase executeUpdate:createSql];
         
@@ -54,8 +54,8 @@
 
 
 /**检查是否存在*/
--(BOOL)isExsitsWithDate:(NSString *)date{
-    NSString *querySQL =[NSString stringWithFormat:@"select * from stepData where date=%@",date];
+-(BOOL)isExsitsWithDate:(NSString *)uuid{
+    NSString *querySQL =[NSString stringWithFormat:@"select * from userInfo where uuid=%@",uuid];
     FMResultSet *set =[_dataBase executeQuery:querySQL];
     if ([set next]) {
         return YES;
@@ -66,8 +66,8 @@
 
 }
 /**添加数据*/
--(BOOL)addStepDataModel:(DBStepModel *)model{
-    BOOL isExsits =[self isExsitsWithDate:model.date];
+-(BOOL)addStepDataModel:(UserModel *)model{
+    BOOL isExsits =[self isExsitsWithDate:model.uuid];
     if (isExsits) {
         //删除数据.
         [self deleteStepDataModel:model];
@@ -75,23 +75,23 @@
 //        [_dataBase executeQuery:deleteSQL];
        
         //添加新数据.
-        NSString *insertSQL =@"insert into stepData (date,myStep,goalStep)values(?,?,?)";
-        BOOL success = [_dataBase executeUpdate:insertSQL,model.date,model.myStep,model.goalStep];
+        NSString *insertSQL =@"insert into userInfo (uuid,name,age,asign)values(?,?,?,?)";
+        BOOL success = [_dataBase executeUpdate:insertSQL,model.uuid,model.name,model.age,model.asign];
         return success;
     }else {
         //添加新数据.
-        NSString *insertSQL =@"insert into stepData (date,myStep,goalStep)values(?,?,?)";
-        BOOL success = [_dataBase executeUpdate:insertSQL,model.date,model.myStep,model.goalStep];
+        NSString *insertSQL =@"insert into userInfo (uuid,name,age,asign)values(?,?,?,?)";
+        BOOL success = [_dataBase executeUpdate:insertSQL,model.uuid,model.name,model.age,model.asign];
         return success;
     }
   
 }
 /**删除数据*/
--(BOOL)deleteStepDataModel:(DBStepModel *)model{
+-(BOOL)deleteStepDataModel:(UserModel *)model{
     //删除对应的记录.
-    BOOL isExists =[self isExsitsWithDate:model.date];
+    BOOL isExists =[self isExsitsWithDate:model.uuid];
     if (isExists) {
-        BOOL success =[_dataBase executeUpdate:@"delete from stepData where date=?",model.date];
+        BOOL success =[_dataBase executeUpdate:@"delete from userInfo where uuid=?",model.uuid];
         return success;
     }
     else{
@@ -105,7 +105,7 @@
 -(BOOL)deleteStepData{
    
     
-        BOOL success =[_dataBase executeUpdate:@"DELETE FROM stepData"];
+        BOOL success =[_dataBase executeUpdate:@"DELETE FROM userInfo"];
     
         return success;
     
@@ -113,18 +113,17 @@
  
 }
 
--(NSArray *)getOneData:(NSString *)date {
+-(NSArray *)getOneData:(NSString *)uuid {
    
-    FMResultSet *set =[_dataBase executeQuery:@"select * from stepData where date=?",date];
+    FMResultSet *set =[_dataBase executeQuery:@"select * from userInfo where uuid=?",uuid];
     NSMutableArray *array =[[NSMutableArray alloc]init];
     
     while ([set next]) {
-        DBStepModel *model = [[DBStepModel alloc] init];
+        UserModel *model = [[UserModel alloc] init];
         //从结果集中获取数据.
         //数据库中是不去分大小写的.
-        model.date =[set stringForColumn:@"date"];
-        model.myStep =[set stringForColumn:@"myStep"];
-        model.goalStep =[set stringForColumn:@"goalStep"];
+        model.uuid =[set stringForColumn:@"uuid"];
+        model.name =[set stringForColumn:@"name"];
         
         [array addObject:model];
         
@@ -134,18 +133,15 @@
 
 /**获取所有数据*/
 -(NSArray *)getAllStepData{
-    NSString *fetchsql =@"select * from stepData";
+    NSString *fetchsql =@"select * from userInfo";
     FMResultSet *set =[_dataBase executeQuery:fetchsql];
     NSMutableArray *array =[[NSMutableArray alloc]init];
    
     while ([set next]) {
-        DBStepModel *model = [[DBStepModel alloc] init];
+        UserModel *model = [[UserModel alloc] init];
         //从结果集中获取数据.
         //数据库中是不去分大小写的.
-        model.date =[set stringForColumn:@"date"];
-        model.myStep =[set stringForColumn:@"myStep"];
-        model.goalStep =[set stringForColumn:@"goalStep"];
-      
+        model.uuid =[set stringForColumn:@"uuid"];
         [array addObject:model];
         
     }

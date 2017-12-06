@@ -8,15 +8,55 @@
 
 #import "FriendViewController.h"
 
-@interface FriendViewController ()
+@interface FriendViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic,strong)UITableView *tableView;
+@property (nonatomic,strong) NSMutableArray* dataSource;
 
 @end
 
 @implementation FriendViewController
 
+-(UITableView *)tableView{
+    
+    int a[5]={1,2,3,4,5};
+    int *ptr = (int*)(&a+1);
+    printf("%d,%d",*(a+1),*(ptr-1));
+    
+    
+    
+    
+    if (!_tableView) {
+        _tableView  = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, WIDTH, HEIGHT-64) style:UITableViewStylePlain];
+        _tableView.delegate = self;
+        _tableView.dataSource =self;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    }
+    return _tableView;
+    
+    
+}
+- (NSMutableArray *)dataSource {
+    if (_dataSource) {
+        return _dataSource;
+    }
+    _dataSource = [[NSMutableArray alloc] init];
+    return _dataSource;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.view addSubview:self.tableView];
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+
+    return 10;
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    return nil;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,7 +7,6 @@
 //
 
 #import "RealmViewController.h"
-
 @interface RealmViewController ()
 
 @end
@@ -17,6 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {

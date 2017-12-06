@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HeadModel.h"
 @interface HeaderView : UIView
+
+
+- (void)updateFrameWithModel:(HeadModel*)mode;
 
 @end
