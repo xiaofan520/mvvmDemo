@@ -50,6 +50,15 @@
 		318D7DB61E10E8C300E869A8 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 318D7DB51E10E8C300E869A8 /* libsqlite3.0.tbd */; };
 		318D7DBC1E10EB8400E869A8 /* FmdbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 318D7DBB1E10EB8400E869A8 /* FmdbViewController.m */; };
 		318D7DBF1E10EFF200E869A8 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 318D7DBE1E10EFF200E869A8 /* UserModel.m */; };
+		31A1B4CD1FD91A6A009A61F7 /* UIView+BadBackgroundBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A1B4BE1FD91A6A009A61F7 /* UIView+BadBackgroundBehavior.m */; };
+		31A1B4CE1FD91A6A009A61F7 /* UIView+ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A1B4C01FD91A6A009A61F7 /* UIView+ext.m */; };
+		31A1B4CF1FD91A6A009A61F7 /* UIColor+ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A1B4C31FD91A6A009A61F7 /* UIColor+ext.m */; };
+		31A1B4D01FD91A6A009A61F7 /* UIApplication+ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A1B4C51FD91A6A009A61F7 /* UIApplication+ext.m */; };
+		31A1B4D11FD91A6A009A61F7 /* UIScreen+ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A1B4C61FD91A6A009A61F7 /* UIScreen+ext.m */; };
+		31A1B4D21FD91A6A009A61F7 /* UILabel+ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A1B4C71FD91A6A009A61F7 /* UILabel+ext.m */; };
+		31A1B4D31FD91A6A009A61F7 /* UINavigationController+ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A1B4C81FD91A6A009A61F7 /* UINavigationController+ext.m */; };
+		31A1B4D41FD91A6A009A61F7 /* UIImage+ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A1B4CB1FD91A6A009A61F7 /* UIImage+ext.m */; };
+		31A1B4D51FD91A6A009A61F7 /* UIButton+ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A1B4CC1FD91A6A009A61F7 /* UIButton+ext.m */; };
 		31BAA0501E27915800ADA129 /* Foo111ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BAA04F1E27915800ADA129 /* Foo111ViewController.swift */; };
 		31C5CD971E1C918200F76FC5 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C5CD961E1C918200F76FC5 /* libc++.1.tbd */; };
 		31E0613F1E0CF1D400EEC917 /* morentongxiang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31E0613D1E0CF1D400EEC917 /* morentongxiang@2x.png */; };
@@ -169,6 +178,24 @@
 		318D7DBB1E10EB8400E869A8 /* FmdbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FmdbViewController.m; sourceTree = "<group>"; };
 		318D7DBD1E10EFF200E869A8 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		318D7DBE1E10EFF200E869A8 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		31A1B4BB1FD91A6A009A61F7 /* UILabel+ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ext.h"; sourceTree = "<group>"; };
+		31A1B4BC1FD91A6A009A61F7 /* UIScreen+ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+ext.h"; sourceTree = "<group>"; };
+		31A1B4BD1FD91A6A009A61F7 /* UIApplication+ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+ext.h"; sourceTree = "<group>"; };
+		31A1B4BE1FD91A6A009A61F7 /* UIView+BadBackgroundBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BadBackgroundBehavior.m"; sourceTree = "<group>"; };
+		31A1B4BF1FD91A6A009A61F7 /* UINavigationController+ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+ext.h"; sourceTree = "<group>"; };
+		31A1B4C01FD91A6A009A61F7 /* UIView+ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ext.m"; sourceTree = "<group>"; };
+		31A1B4C11FD91A6A009A61F7 /* UIImage+ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ext.h"; sourceTree = "<group>"; };
+		31A1B4C21FD91A6A009A61F7 /* UIButton+ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ext.h"; sourceTree = "<group>"; };
+		31A1B4C31FD91A6A009A61F7 /* UIColor+ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ext.m"; sourceTree = "<group>"; };
+		31A1B4C41FD91A6A009A61F7 /* UIView+BadBackgroundBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BadBackgroundBehavior.h"; sourceTree = "<group>"; };
+		31A1B4C51FD91A6A009A61F7 /* UIApplication+ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+ext.m"; sourceTree = "<group>"; };
+		31A1B4C61FD91A6A009A61F7 /* UIScreen+ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+ext.m"; sourceTree = "<group>"; };
+		31A1B4C71FD91A6A009A61F7 /* UILabel+ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ext.m"; sourceTree = "<group>"; };
+		31A1B4C81FD91A6A009A61F7 /* UINavigationController+ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+ext.m"; sourceTree = "<group>"; };
+		31A1B4C91FD91A6A009A61F7 /* UIView+ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ext.h"; sourceTree = "<group>"; };
+		31A1B4CA1FD91A6A009A61F7 /* UIColor+ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ext.h"; sourceTree = "<group>"; };
+		31A1B4CB1FD91A6A009A61F7 /* UIImage+ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ext.m"; sourceTree = "<group>"; };
+		31A1B4CC1FD91A6A009A61F7 /* UIButton+ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ext.m"; sourceTree = "<group>"; };
 		31BAA04F1E27915800ADA129 /* Foo111ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Foo111ViewController.swift; sourceTree = "<group>"; };
 		31C5CD961E1C918200F76FC5 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
 		31E0613D1E0CF1D400EEC917 /* morentongxiang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "morentongxiang@2x.png"; sourceTree = "<group>"; };
@@ -367,6 +394,7 @@
 		318D7D821E10E85200E869A8 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				31A1B4BA1FD91A6A009A61F7 /* UI-Category */,
 				318D7D861E10E87800E869A8 /* FMDB */,
 				318D7D921E10E87800E869A8 /* MJExtension */,
 				318D7D831E10E86A00E869A8 /* BGFMDB.h */,
@@ -449,6 +477,31 @@
 				318D7DBE1E10EFF200E869A8 /* UserModel.m */,
 			);
 			name = "fmdb数据库";
+			sourceTree = "<group>";
+		};
+		31A1B4BA1FD91A6A009A61F7 /* UI-Category */ = {
+			isa = PBXGroup;
+			children = (
+				31A1B4BB1FD91A6A009A61F7 /* UILabel+ext.h */,
+				31A1B4C71FD91A6A009A61F7 /* UILabel+ext.m */,
+				31A1B4BD1FD91A6A009A61F7 /* UIApplication+ext.h */,
+				31A1B4C51FD91A6A009A61F7 /* UIApplication+ext.m */,
+				31A1B4BF1FD91A6A009A61F7 /* UINavigationController+ext.h */,
+				31A1B4C81FD91A6A009A61F7 /* UINavigationController+ext.m */,
+				31A1B4C21FD91A6A009A61F7 /* UIButton+ext.h */,
+				31A1B4CC1FD91A6A009A61F7 /* UIButton+ext.m */,
+				31A1B4CA1FD91A6A009A61F7 /* UIColor+ext.h */,
+				31A1B4C31FD91A6A009A61F7 /* UIColor+ext.m */,
+				31A1B4C41FD91A6A009A61F7 /* UIView+BadBackgroundBehavior.h */,
+				31A1B4BE1FD91A6A009A61F7 /* UIView+BadBackgroundBehavior.m */,
+				31A1B4C61FD91A6A009A61F7 /* UIScreen+ext.m */,
+				31A1B4BC1FD91A6A009A61F7 /* UIScreen+ext.h */,
+				31A1B4C91FD91A6A009A61F7 /* UIView+ext.h */,
+				31A1B4C01FD91A6A009A61F7 /* UIView+ext.m */,
+				31A1B4C11FD91A6A009A61F7 /* UIImage+ext.h */,
+				31A1B4CB1FD91A6A009A61F7 /* UIImage+ext.m */,
+			);
+			path = "UI-Category";
 			sourceTree = "<group>";
 		};
 		31E061411E0D026800EEC917 /* 发现 */ = {
@@ -705,6 +758,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31A1B4D01FD91A6A009A61F7 /* UIApplication+ext.m in Sources */,
 				3133ED651E0A58CB005FC321 /* UIColor+CDColor.m in Sources */,
 				3133ED621E0A585A005FC321 /* UILabel+CDLabel.m in Sources */,
 				3133ED5F1E0A5819005FC321 /* UIFont+CDFont.m in Sources */,
@@ -719,35 +773,43 @@
 				3170F6F01E276ADA0008D59D /* SwiftView.swift in Sources */,
 				318D7DAA1E10E87800E869A8 /* FMResultSet.m in Sources */,
 				318D7DA71E10E87800E869A8 /* FMDatabaseAdditions.m in Sources */,
+				31A1B4D41FD91A6A009A61F7 /* UIImage+ext.m in Sources */,
 				31F3EEC21D9110F1003BA9C8 /* UIColor+CKLHexColor.m in Sources */,
 				313A5E391E1F657C0042EDD4 /* CodeViewModel.m in Sources */,
 				313A5E2B1E1F36840042EDD4 /* FriendViewController.m in Sources */,
+				31A1B4CF1FD91A6A009A61F7 /* UIColor+ext.m in Sources */,
 				3133ED741E0A615E005FC321 /* HeaderViewModel.m in Sources */,
 				31E0614A1E0D02CC00EEC917 /* ContetModel.m in Sources */,
 				318D7DAB1E10E87800E869A8 /* MJArgument.m in Sources */,
+				31A1B4D21FD91A6A009A61F7 /* UILabel+ext.m in Sources */,
 				313A5E301E1F423C0042EDD4 /* MyCodeViewController.m in Sources */,
 				31F3EE8C1D910F23003BA9C8 /* AppDelegate.m in Sources */,
 				31F3EEC11D9110F1003BA9C8 /* NSString+CKLStrLenght.m in Sources */,
 				318D7DBF1E10EFF200E869A8 /* UserModel.m in Sources */,
 				318D7DB21E10E87900E869A8 /* NSObject+MJKeyValue.m in Sources */,
 				318D7DA91E10E87800E869A8 /* FMDatabaseQueue.m in Sources */,
+				31A1B4D11FD91A6A009A61F7 /* UIScreen+ext.m in Sources */,
 				3133ED581E0A5270005FC321 /* HeadModel.m in Sources */,
 				318D7DB31E10E87900E869A8 /* NSObject+MJMember.m in Sources */,
 				318D7DAE1E10E87900E869A8 /* MJMethod.m in Sources */,
 				31F3EE891D910F23003BA9C8 /* main.m in Sources */,
 				31E061501E0D072C00EEC917 /* FindViewModel.m in Sources */,
 				318D7DBC1E10EB8400E869A8 /* FmdbViewController.m in Sources */,
+				31A1B4D31FD91A6A009A61F7 /* UINavigationController+ext.m in Sources */,
 				313A5E361E1F42D20042EDD4 /* MyCodelModel.m in Sources */,
 				31BAA0501E27915800ADA129 /* Foo111ViewController.swift in Sources */,
 				3133ED711E0A602B005FC321 /* NSString+CDStringSize.m in Sources */,
+				31A1B4CD1FD91A6A009A61F7 /* UIView+BadBackgroundBehavior.m in Sources */,
 				318D7DB11E10E87900E869A8 /* NSObject+MJCoding.m in Sources */,
 				3133ED551E0A523B005FC321 /* ViewController.m in Sources */,
 				314C93CA1E123B3400EAE029 /* DEManager.m in Sources */,
+				31A1B4D51FD91A6A009A61F7 /* UIButton+ext.m in Sources */,
 				318D7D851E10E86A00E869A8 /* BGFMDB.m in Sources */,
 				318D7DAD1E10E87800E869A8 /* MJMember.m in Sources */,
 				318D7DB01E10E87900E869A8 /* MJTypeEncoding.m in Sources */,
 				31E061441E0D027D00EEC917 /* FindViewController.m in Sources */,
 				313A5E3C1E1F66970042EDD4 /* CodeTableViewCell.m in Sources */,
+				31A1B4CE1FD91A6A009A61F7 /* UIView+ext.m in Sources */,
 				31E0614D1E0D052500EEC917 /* FindTableViewCell.m in Sources */,
 				3133ED771E0A783E005FC321 /* MyTableviewContViewModel.m in Sources */,
 				3133ED7A1E0A7987005FC321 /* CDMineContentCell.m in Sources */,

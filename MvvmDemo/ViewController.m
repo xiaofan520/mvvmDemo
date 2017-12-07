@@ -136,9 +136,9 @@ typedef NS_ENUM(NSInteger,CellContentOptionType){
 -(UITableView*)tableView{
     
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, WIDTH, HEIGHT-64) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT) style:UITableViewStylePlain];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        _tableView.contentInset= UIEdgeInsetsMake(221-64, 0, 0, 0);
+        _tableView.contentInset= UIEdgeInsetsMake(221, 0, 0, 0);
         
         [_tableView registerClass:[CDMineContentCell class] forCellReuseIdentifier:@"cell"];
         
